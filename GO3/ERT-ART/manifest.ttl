@@ -1,0 +1,34 @@
+@prefix :       <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/syntax-query/manifest#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix mfx:    <http://jena.hpl.hp.com/2005/05/test-manifest-extra#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:comment "Query tests to calculate ERT-ART" ;
+    mf:entries
+    ( 
+
+#:test_1
+#:test_2
+#:test_3
+#:test_4
+#:test_5
+#:test_6
+#:test_7
+#:test_8
+#:test_9
+:test_10
+) .
+
+:test_10 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Query to calculate ERT-ART" ;
+    dawgt:approval dawgt:Approved;
+#    dawgt:approvedBy <???> ;
+    mf:action
+         [ qt:query  <q10.rq> ;
+           qt:graphData   <q10.ttl> ] ;
+    mf:result  <q10.srx>
+    .

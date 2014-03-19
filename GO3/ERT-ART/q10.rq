@@ -1,0 +1,39 @@
+EFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001XMLSchema#>
+ 
+PREFIX gy: <http://grid-observatory.org/ns/2014/GO3#>
+PREFIX gyPJ: <http://grid-observatory.org/instances/pbsJob/>
+PREFIX gyBE: <http://grid-observatory.org/instances/bdiiEntry/>
+PREFIX truc: <http://grid-observatory.org/instances/truc/>
+ 
+SELECT ?iriJob ?iriQueue ?dateEntryJobInQueue ?dateExecuteJob (?ert1 AS ?ERT)
+       ((?dateEntryJobInQueue  - ?dateExecuteJob) AS ?ART)  
+       (?ert1 - ?ART AS ?ERTMinusART)
+{
+        SERVICE <http://BDII.grid-observatory.org/sparql> 
+        { 
+            ?iriQueue  rdf:type gy:BDIIEntry ;
+	               gy:GlueCEUniqueID ?queueName ;
+	               gy:GlueCEStateEstimatedResponseTime ?FirstErtInCollection .
+            ?FirstErtInCollection rdf:rest*/rdf:first ?ert1. 
+            ?ert1 rdf:rest/rdf:first ?ert2.
+	    ?ert1 gy:time ?dateErt1;
+                  gy:value ?valErt1.
+            ?ert2 gy:time ?dateErt2;
+                  gy:value ?valErt2.
+ 
+           FILTER ( ?dateErt1>= xsd:dateTime("2005-01-01T00:00:00Z") && ?dateErt1<= xsd:dateTime("2005-01-01T00:00:00Z") && 
+                          ?dateErt2>= xsd:dateTime("2005-01-01T00:00:00Z") && ?dateErt2<= xsd:dateTime("2005-01-01T00:00:00Z") )
+        } 
+        SERVICE <http://pbs.grid-observatory.org/sparql> 
+        { 
+           ?iriJob  rdf:type gy:PBSJob ;
+                   gy:qtime ?dateEntryJobInQueue ;
+                   gy:queue ?iriQueue ;
+                   gy:startTime ?dateExecuteJob.
+ 
+           FILTER ( ?dateEntryJobInQueue >= ?dateErt1 && 
+                          ?dateEntryJobInQueue < ?dateErt2  )
+        } 
+}
