@@ -28,51 +28,16 @@
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
-<<<<<<< HEAD
-         [ qt:query  <q1.rq> ;
-           qt:graphData   <q10.ttl> ] ;
-    mf:result  <q10.srx>
-    .
-=======
          [ qt:query  <q01.rq> ;
            qt:graphData   <q10.ttl> ] ;
     mf:result  <q10.srx>
     .
     
-
->>>>>>> 2d55b3c7676f3956783fd7f64825a742bcd126a9
 :test_2 rdf:type mf:QueryEvaluationTest ;
     mf:name    "Query2" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
-<<<<<<< HEAD
-         [ qt:query  <q2.rq> ;
-           qt:graphData   <q10.ttl> ] ;
-    mf:result  <q10.srx>
-    .
-:test_3 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Query 3" ;
-    dawgt:approval dawgt:Approved;
-#    dawgt:approvedBy <???> ;
-    mf:action
-         [ qt:query  <q3.rq> ;
-           qt:graphData   <q10.ttl> ] ;
-    mf:result  <q10.srx>
-    .
-:test_4 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Query 4" ;
-    dawgt:approval dawgt:Approved;
-#    dawgt:approvedBy <???> ;
-    mf:action
-         [ qt:query  <q4.rq> ;
-           qt:graphData   <q10.ttl> ] ;
-    mf:result  <q10.srx>
-    .
-
-
-
-=======
          [ qt:query  <q02.rq> ;
            qt:graphData   <q10.ttl> ] ;
     mf:result  <q10.srx>
@@ -100,7 +65,6 @@
     mf:result  <q10.srx>
     .
     
->>>>>>> 2d55b3c7676f3956783fd7f64825a742bcd126a9
 :test_10 rdf:type mf:QueryEvaluationTest ;
     mf:name    "Query to calculate ERT-ART" ;
     dawgt:approval dawgt:Approved;
