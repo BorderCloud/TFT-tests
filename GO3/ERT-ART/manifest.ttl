@@ -29,7 +29,7 @@
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q01.rq> ;
-           qt:graphData   <q10.ttl> ] ;
+           qt:data   <q10.ttl> ] ;
     mf:result  <q10.srx>
     .
     
@@ -39,7 +39,7 @@
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q02.rq> ;
-           qt:graphData   <q10.ttl> ] ;
+           qt:data   <q10.ttl> ] ;
     mf:result  <q10.srx>
     .
     
@@ -50,7 +50,7 @@
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q03.rq> ;
-           qt:graphData   <q10.ttl> ] ;
+           qt:data   <q10.ttl> ] ;
     mf:result  <q10.srx>
     .
     
@@ -61,7 +61,7 @@
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q04.rq> ;
-           qt:graphData   <q10.ttl> ] ;
+           qt:data   <q10.ttl> ] ;
     mf:result  <q10.srx>
     .
     
@@ -71,6 +71,6 @@
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q10.rq> ;
-           qt:graphData   <q10.ttl> ] ;
+           qt:data   <q10.ttl> ] ;
     mf:result  <q10.srx>
     .
