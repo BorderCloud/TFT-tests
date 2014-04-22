@@ -1,0 +1,2 @@
+#?a ?b  ((?b  - ?a) AS ?bMinusa) 
+#"2005-01-01T00:05:00Z"^^xsd:dateTime "2005-01-01T01:00:00Z"^^xsd:dateTime  55m

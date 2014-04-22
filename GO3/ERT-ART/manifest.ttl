@@ -12,15 +12,15 @@
     ( 
 
 :test_1
-:test_2
-:test_3
-:test_4
+#:test_2
+#:test_3
+#:test_4
 #:test_5
 #:test_6
 #:test_7
 #:test_8
 #:test_9
-:test_10
+#:test_10
 ) .
 
 :test_1 rdf:type mf:QueryEvaluationTest ;
@@ -29,8 +29,8 @@
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q01.rq> ;
-           qt:data   <q10.ttl> ] ;
-    mf:result  <q10.srx>
+           qt:data   <pbs.ttl> ] ;
+    mf:result  <q01.srx>
     .
     
 :test_2 rdf:type mf:QueryEvaluationTest ;

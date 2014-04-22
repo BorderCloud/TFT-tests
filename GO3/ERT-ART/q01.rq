@@ -1,13 +1,7 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001XMLSchema#>
- 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 PREFIX gy: <http://grid-observatory.org/ns/2014/GO3#>
-PREFIX gyPJ: <http://grid-observatory.org/instances/pbsJob/>
-PREFIX gyBE: <http://grid-observatory.org/instances/bdiiEntry/>
-PREFIX truc: <http://grid-observatory.org/instances/truc/>
  
-SELECT ?a ?b ((?a  + ?b) AS ?aPlusb)  ((?a  - ?b) AS ?aMinus?b)  
+SELECT ?a ?b ((?b  - ?a) AS ?bMinusa)  
 {
         ?iriJob  rdf:type gy:PBSJob ;
                    gy:qtime ?a ;

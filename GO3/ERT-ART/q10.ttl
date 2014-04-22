@@ -1,1 +1,48 @@
-todo
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001XMLSchema#> .
+
+@prefix gy: <http://grid-observatory.org/ns/2014/GO3#> .
+@prefix gyPJ: <http://grid-observatory.org/instances/pbsJob/> .
+@prefix gyBE: <http://grid-observatory.org/instances/bdiiEntry/> .
+@prefix _: <http://grid-observatory.org/blanknode/> .
+
+gyBE:gy_be1			rdf:type gy:BDIIEntry ;
+					gy:GlueCEUniqueIRI gy:uneQueueIRI ;
+					gy:GlueCEUniqueID "uneQueue"^^xsd:string ;
+					gy:GlueCEStateEstimatedResponseTimeList _:listqueue1_item1 .
+
+_:listqueue1_item1	rdf:first 	_:queue1_item1 ;
+					rdf:rest 	_:listqueue1_item2 .
+					
+_:queue1_item1 		rdf:type gy:GlueCEStateEstimatedResponseTime ;
+					gy:time "2014-01-20T10:00:00"^^xsd:dateTime ;
+					gy:value 1 .
+					
+_:listqueue1_item2	rdf:first 	_:queue1_item2 ;
+					rdf:rest 	_:listqueue1_item3 .
+					
+_:queue1_item2 		rdf:type gy:GlueCEStateEstimatedResponseTime ;
+					gy:time "2014-01-20T11:00:00"^^xsd:dateTime ;
+					gy:value 2 .				
+					
+_:listqueue1_item3	rdf:first 	_:queue1_item3 ;
+					rdf:rest 	_:listqueue1_item4 .
+					
+_:queue1_item3 		rdf:type gy:GlueCEStateEstimatedResponseTime ;
+					gy:time "2014-01-20T12:00:00"^^xsd:dateTime ;
+					gy:value 3 .
+					
+_:listqueue1_item4	rdf:first 	_:queue1_item4 ;
+					rdf:rest rdf:nil .
+					
+_:queue1_item4 		rdf:type gy:GlueCEStateEstimatedResponseTime ;
+					gy:time "2014-01-20T13:00:00"^^xsd:dateTime ;
+					gy:value 4 .		
+
+					
+gyPJ:gy_pj1  		rdf:type gy:PBSJob ;
+					gy:queue gy:uneQueueIRI;
+					gy:jobID <18119.grid10.lal.in2p3.fr> ;
+					gy:qtime "2014-01-20T12:30:00"^^xsd:dateTime ;
+					gy:startTime "2014-01-20T18:30:00"^^xsd:dateTime .
