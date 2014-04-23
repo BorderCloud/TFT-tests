@@ -26,7 +26,12 @@ gyBV:gy_queue1_e2_ert gy:time "2005-01-01T00:15:00Z"^^xsd:dateTime ;
 					  gy:value 2000 .
      
 gyBV:gy_queue1_e3 rdf:first gyBV:gy_queue1_e3_ert;
-				  rdf:rest  rdf:nil .
+				  rdf:rest  gyBV:gy_queue1_e4 .
 gyBV:gy_queue1_e3_ert gy:time "2005-01-01T00:30:00Z"^^xsd:dateTime ;
 					  gy:value 3000 .
+					  
+gyBV:gy_queue1_e4 rdf:first gyBV:gy_queue1_e4_ert;
+				  rdf:rest  rdf:nil .
+gyBV:gy_queue1_e4_ert gy:time "2005-01-02T00:10:00Z"^^xsd:dateTime ;
+					  gy:value 4000 .
 					  
