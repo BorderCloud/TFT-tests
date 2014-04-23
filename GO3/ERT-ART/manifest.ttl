@@ -14,17 +14,13 @@
 :test_1
 :test_2
 :test_3
-#:test_4
-#:test_5
-#:test_6
-#:test_7
-#:test_8
-#:test_9
-#:test_10
+:test_4
+:test_5
+:test_10
 ) .
 
 :test_1 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Substract in the select" ;
+    mf:name    "Substract date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -45,32 +41,51 @@
     
 
 :test_3 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Simple path in property" ;
+    mf:name    "Star path for RDF collection" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q03.rq> ;
-           qt:data   <q10.ttl> ] ;
-    mf:result  <q10.srx>
+           qt:data   <bdii.ttl> ] ;
+    mf:result  <q03.srx>
     .
     
     
 :test_4 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Query4" ;
+    mf:name    "Filter date & order by date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
          [ qt:query  <q04.rq> ;
-           qt:data   <q10.ttl> ] ;
-    mf:result  <q10.srx>
+           qt:data   <bdii.ttl> ] ;
+    mf:result  <q04.srx>
+	
+:test_5 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "Filter date & order by date" ;
+    dawgt:approval dawgt:Approved;
+#    dawgt:approvedBy <???> ;
+    mf:action
+         [ qt:query  <q05.rq> ;
+           qt:graphData <bdii.ttl> , <pbs.ttl>  
+			] ;
+    mf:result  <q05.srx>
+	
     .
     
 :test_10 rdf:type mf:QueryEvaluationTest ;
     mf:name    "Query to calculate ERT-ART" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
+    mf:feature sd:BasicFederatedQuery ;
     mf:action
          [ qt:query  <q10.rq> ;
-           qt:data   <q10.ttl> ] ;
+           
+                  qt:serviceData [
+                       qt:endpoint <http://example1.org/sparql> ;
+                       qt:data     <pbs.ttl>
+				  qt:serviceData [
+                       qt:endpoint <http://example2.org/sparql> ;
+                       qt:data     <bdii.ttl>  
+           ] ;
     mf:result  <q10.srx>
     .

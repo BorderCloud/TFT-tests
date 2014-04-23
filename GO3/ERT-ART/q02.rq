@@ -1,10 +1,11 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gy: <http://grid-observatory.org/ns/2014/GO3#>
  
-SELECT ?dateErt1 ?dateErt2 ?valErt1
+SELECT DISTINCT ?ert1 ?valErt1 ?dateErt1 ?dateErt2 
 {
-	?ertItem rdf:first ?dateErt1 ;
-			gy:value ?valErt1 ;
-			rdf:rest/rdf:first ?dateErt2 ;
-			rdf:rest/gy:value ?valErt2 .       
+	?item 	rdf:first ?ert1 ;
+			rdf:rest/rdf:first ?ert2 .
+	?ert1 	gy:time ?dateErt1 ;
+			gy:value ?valErt1.
+	?ert2 	gy:time ?dateErt2 .   
 }

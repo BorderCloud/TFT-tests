@@ -1,0 +1,28 @@
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="queueName"/>
+  <variable name="dateErt1"/>
+  <variable name="dateErt2"/>
+  <variable name="valErt1"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="queueName"><literal>demo_queue</literal></binding>
+   <binding name="dateErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:00:00Z</literal></binding>
+   <binding name="dateErt2"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:15:00Z</literal></binding>
+   <binding name="valErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1000</literal></binding>
+  </result>
+  <result>
+   <binding name="queueName"><literal>demo_queue</literal></binding>
+   <binding name="dateErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:15:00Z</literal></binding>
+   <binding name="dateErt2"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:30:00Z</literal></binding>
+   <binding name="valErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">2000</literal></binding>
+  </result>
+  <result>
+   <binding name="queueName"><literal>demo_queue</literal></binding>
+   <binding name="dateErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:30:00Z</literal></binding>
+   <binding name="dateErt2"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-02T00:10:00Z</literal></binding>
+   <binding name="valErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3000</literal></binding>
+  </result>
+ </results>
+</sparql>
