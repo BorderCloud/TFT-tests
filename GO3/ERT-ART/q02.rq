@@ -1,17 +1,10 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001XMLSchema#>
- 
 PREFIX gy: <http://grid-observatory.org/ns/2014/GO3#>
-PREFIX gyPJ: <http://grid-observatory.org/instances/pbsJob/>
-PREFIX gyBE: <http://grid-observatory.org/instances/bdiiEntry/>
-PREFIX truc: <http://grid-observatory.org/instances/truc/>
  
-SELECT ?firstElement ?dateErt1 ?valErt1
+SELECT ?dateErt1 ?dateErt2 ?valErt1
 {
-      ?iriQueue  rdf:type gy:BDIIEntry ;
-				gy:GlueCEStateEstimatedResponseTime ?FirstErtInCollection .
-				?FirstErtInCollection rdf:rest/rdf:first ?firstElement. 
-	  ?firstElement gy:time ?dateErt1;
-                  gy:value ?valErt1.        
+	?ertItem rdf:first ?dateErt1 ;
+			gy:value ?valErt1 ;
+			rdf:rest/rdf:first ?dateErt2 ;
+			rdf:rest/gy:value ?valErt2 .       
 }

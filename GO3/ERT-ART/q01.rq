@@ -1,7 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 PREFIX gy: <http://grid-observatory.org/ns/2014/GO3#>
  
-SELECT ?a ?b ((?b  - ?a) AS ?bMinusa)  
+SELECT ?a ?b ((?b  - ?a) AS ?diffSeconds)  
 {
         ?iriJob  rdf:type gy:PBSJob ;
                    gy:qtime ?a ;

@@ -1,3 +1,4 @@
+#CLEAR GRAPH <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl>
 #LOAD <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl> INTO GRAPH  <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl> 
 @prefix gy: <http://grid-observatory.org/ns/2014/GO3#> .
 @prefix gyBE: <http://grid-observatory.org/instances/bdiiEntry/> .
@@ -14,18 +15,17 @@ gyBE:gy_demo_bdiientry
  gy:GlueCEStateEstimatedResponseTimeList gyBV:gy_queue1_e1 .
 
 # On ajoute 3 éléments ERT : à minuit, ERT = 1000, 0h15 => 2000, 0h30 => 3000
-gyBV:gy_queue1_e1
-  rdf:first "2005-01-01T00:00:00Z"^^xsd:dateTime ;
-  gy:value 1000;
-  rdf:rest gyBV:gy_queue1_e2 .
-  
-gyBV:gy_queue1_e2
-  rdf:first "2005-01-01T00:15:00Z"^^xsd:dateTime ;
-  gy:value 2000;
-  rdf:rest gyBV:gy_queue1_e3 .
-  
-gyBV:gy_queue1_e3
-  rdf:first "2005-01-01T00:30:00Z"^^xsd:dateTime ;
-  gy:value 3000;
-  rdf:rest rdf:nil .
-  
+gyBV:gy_queue1_e1 rdf:first gyBV:gy_queue1_e1_ert;
+				  rdf:rest gyBV:gy_queue1_e2 .
+gyBV:gy_queue1_e1_ert gy:time "2005-01-01T00:00:00Z"^^xsd:dateTime ;
+					  gy:value 1000;
+   
+gyBV:gy_queue1_e2 rdf:first gyBV:gy_queue1_e2_ert;
+				  rdf:rest gyBV:gy_queue1_e3 .
+gyBV:gy_queue1_e2_ert gy:time "2005-01-01T00:15:00Z"^^xsd:dateTime ;
+					  gy:value 2000;
+     
+gyBV:gy_queue1_e3 rdf:first gyBV:gy_queue1_e3_ert;
+				  rdf:rest  rdf:nil .
+gyBV:gy_queue1_e3_ert gy:time "2005-01-01T00:30:00Z"^^xsd:dateTime ;
+					  gy:value 3000;
