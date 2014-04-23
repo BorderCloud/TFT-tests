@@ -1,3 +1,4 @@
+ï»¿@prefix :       <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART> .
 #LOAD <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/pbs.ttl> INTO GRAPH  <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/pbs.ttl> 
 @prefix gy: <http://grid-observatory.org/ns/2014/GO3#> .
 @prefix gyPJ: <http://grid-observatory.org/instances/pbsJob/> .
@@ -6,10 +7,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Un seul job, mis en queue à 0h05 et exécuté à 1h00
-gyPJ:gy_demo_job
-	rdf:type gy:PBSJob ;
-	gy:qtime "2005-01-01T00:05:00Z"^^xsd:dateTime ;
-	gy:queue "demo_queue" ;
-	gy:startTime "2005-01-01T01:00:00Z"^^xsd:dateTime .
-	
+# Un seul job, mis en queue Ã  0h05 et exÃ©cutÃ© Ã  1h00
+gyPJ:gy_demo_job rdf:type gy:PBSJob ;
+			gy:qtime "2005-01-01T00:05:00Z"^^xsd:dateTime ;
+			gy:queue "demo_queue" ;
+			gy:startTime "2005-01-01T01:00:00Z"^^xsd:dateTime .

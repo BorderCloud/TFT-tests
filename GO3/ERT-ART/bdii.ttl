@@ -1,4 +1,4 @@
-#CLEAR GRAPH <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl>
+ï»¿#CLEAR GRAPH <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl>
 #LOAD <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl> INTO GRAPH  <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl> 
 @prefix gy: <http://grid-observatory.org/ns/2014/GO3#> .
 @prefix gyBE: <http://grid-observatory.org/instances/bdiiEntry/> .
@@ -8,13 +8,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# On créé une nouvelle queue nommée demo_queue
+# On crÃ©Ã© une nouvelle queue nommÃ©e demo_queue
 gyBE:gy_demo_bdiientry
  rdf:type gy:BDIIEntry ;
  gy:GlueCEUniqueID "http://pipo/demo_queue" ;
  gy:GlueCEStateEstimatedResponseTimeList gyBV:gy_queue1_e1 .
 
-# On ajoute 3 éléments ERT : à minuit, ERT = 1000, 0h15 => 2000, 0h30 => 3000
+# On ajoute 3 Ã©lÃ©ments ERT : Ã  minuit, ERT = 1000, 0h15 => 2000, 0h30 => 3000
 gyBV:gy_queue1_e1 rdf:first   [
 								gy:time "2005-01-01T00:00:00Z"^^xsd:dateTime ;
 								gy:value 1000
@@ -24,7 +24,7 @@ gyBV:gy_queue1_e1 rdf:first   [
 gyBV:gy_queue1_e2 rdf:first  [
 								gy:time "2005-01-01T00:15:00Z"^^xsd:dateTime ;
 								gy:value 2000
-							]
+							] ;
 				  rdf:rest gyBV:gy_queue1_e3 .
      
 gyBV:gy_queue1_e3 rdf:first [
