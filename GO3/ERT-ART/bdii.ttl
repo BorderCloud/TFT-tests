@@ -18,14 +18,14 @@ gyBE:gy_demo_bdiientry
 gyBV:gy_queue1_e1 rdf:first gyBV:gy_queue1_e1_ert;
 				  rdf:rest gyBV:gy_queue1_e2 .
 gyBV:gy_queue1_e1_ert gy:time "2005-01-01T00:00:00Z"^^xsd:dateTime ;
-					  gy:value 1000;
+					  gy:value 1000.
    
 gyBV:gy_queue1_e2 rdf:first gyBV:gy_queue1_e2_ert;
 				  rdf:rest gyBV:gy_queue1_e3 .
 gyBV:gy_queue1_e2_ert gy:time "2005-01-01T00:15:00Z"^^xsd:dateTime ;
-					  gy:value 2000;
+					  gy:value 2000.
      
 gyBV:gy_queue1_e3 rdf:first gyBV:gy_queue1_e3_ert;
 				  rdf:rest  rdf:nil .
 gyBV:gy_queue1_e3_ert gy:time "2005-01-01T00:30:00Z"^^xsd:dateTime ;
-					  gy:value 3000;
+					  gy:value 3000.
