@@ -7,7 +7,7 @@ SELECT ?queueName ?iriJob ?iriQueue ?enQueueDate ?jobExecutionDate (?dateErt1 AS
        ((?jobExecutionDate - ?enQueueDate) AS ?ART)  
        (?valErt1 - ?ART AS ?ERTMinusART)
 WHERE {
-	SERVICE <http://onevm-60.lal.in2p3.fr:8095/sparql/> {
+	SERVICE <http://example2.org/sparql> {
 	GRAPH <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/bdii.ttl> {
 
 	  ?iriQueue  rdf:type gy:BDIIEntry ;
@@ -24,7 +24,7 @@ WHERE {
 
 	}
 }
-SERVICE <http://onevm-194.lal.in2p3.fr:8095/sparql/> {
+SERVICE <http://example1.org/sparql> {
 	GRAPH <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/pbs.ttl> {
 		# Retrouve toutes les entrées de type Job
 		?iriJob rdf:type gy:PBSJob ;
