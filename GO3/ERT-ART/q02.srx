@@ -7,16 +7,16 @@
  </head>
  <results distinct="false" ordered="true">
   <result>
-   <binding name="ert1"><uri>http://grid-observatory.org/instances/bdiiEntrypropertyValue/gy_queue1_e2_ert</uri></binding>
-   <binding name="valErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">2000</literal></binding>
-   <binding name="dateErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:15:00Z</literal></binding>
-   <binding name="dateErt2"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:30:00Z</literal></binding>
-  </result>
-  <result>
    <binding name="ert1"><uri>http://grid-observatory.org/instances/bdiiEntrypropertyValue/gy_queue1_e1_ert</uri></binding>
    <binding name="valErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1000</literal></binding>
    <binding name="dateErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:00:00Z</literal></binding>
    <binding name="dateErt2"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:15:00Z</literal></binding>
+  </result>
+  <result>
+   <binding name="ert1"><uri>http://grid-observatory.org/instances/bdiiEntrypropertyValue/gy_queue1_e2_ert</uri></binding>
+   <binding name="valErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">2000</literal></binding>
+   <binding name="dateErt1"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:15:00Z</literal></binding>
+   <binding name="dateErt2"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:30:00Z</literal></binding>
   </result>
   <result>
    <binding name="ert1"><uri>http://grid-observatory.org/instances/bdiiEntrypropertyValue/gy_queue1_e3_ert</uri></binding>

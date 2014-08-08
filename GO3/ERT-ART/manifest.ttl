@@ -42,7 +42,7 @@
     
 
 :test_3 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Star path for RDF collection" ;
+    mf:name    "10 Star path for RDF collection" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -53,7 +53,7 @@
     
     
 :test_4 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Filter date & order by date" ;
+    mf:name    "20 Filter date & order by date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -63,7 +63,7 @@
 	.
 	
 :test_5 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Filter date & order by date" ;
+    mf:name    "30 Filter date & order by date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -75,7 +75,7 @@
     .
     
 :test_10 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Query to calculate ERT-ART" ;
+    mf:name    "40 Query to calculate ERT-ART" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:feature sd:BasicFederatedQuery ;
