@@ -13,3 +13,5 @@ SELECT ?queueName ?dateErt1 ?dateErt2  ?valErt1
 							] ;
 					rdf:rest/rdf:first/gy:time ?dateErt2.
 }
+ORDER BY ?valErt1
+

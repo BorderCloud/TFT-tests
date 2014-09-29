@@ -1,4 +1,4 @@
-@prefix :       <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART> .
+@prefix :       <http://bordercloud.github.io/TFT-tests/GO3/ERT-ART/manifest.ttl#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
@@ -21,7 +21,7 @@
 ) .
 
 :test_1 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Substract date" ;
+    mf:name    "10 Substract date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -31,7 +31,7 @@
     .
     
 :test_2 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Simple path in property" ;
+    mf:name    "20 Simple path in property" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -42,7 +42,7 @@
     
 
 :test_3 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Star path for RDF collection" ;
+    mf:name    "30 Star path for RDF collection" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -53,7 +53,7 @@
     
     
 :test_4 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Filter date & order by date" ;
+    mf:name    "40 Filter date & order by date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -63,7 +63,7 @@
 	.
 	
 :test_5 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Filter date & order by date" ;
+    mf:name    "50 Filter date & order by date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
@@ -75,7 +75,7 @@
     .
     
 :test_10 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "Query to calculate ERT-ART" ;
+    mf:name    "60 Query to calculate ERT-ART" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:feature sd:BasicFederatedQuery ;

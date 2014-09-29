@@ -9,3 +9,5 @@ SELECT DISTINCT ?ert1 ?valErt1 ?dateErt1 ?dateErt2
 			gy:value ?valErt1.
 	?ert2 	gy:time ?dateErt2 .   
 }
+ORDER BY ?valErt1
+
