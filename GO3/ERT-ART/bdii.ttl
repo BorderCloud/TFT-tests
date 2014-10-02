@@ -11,7 +11,7 @@
 # On créé une nouvelle queue nommée demo_queue
 gyBE:gy_demo_bdiientry
  rdf:type gy:BDIIEntry ;
- gy:GlueCEUniqueID "http://pipo/demo_queue" ;
+ gy:GlueCEUniqueID "demo_queue" ;
  gy:GlueCEStateEstimatedResponseTimeList gyBV:gy_queue1_e1 .
 
 # On ajoute 3 éléments ERT : à minuit, ERT = 1000, 0h15 => 2000, 0h30 => 3000

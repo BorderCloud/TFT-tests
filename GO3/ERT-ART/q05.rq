@@ -33,5 +33,5 @@ WHERE {
 	# Notez le changement dans le filtre : fait le lien entre les deux morceaux de requêtes
 	# (?enqueueDate est dans le graphe pbs, ?dateErt1 et ?dateErt2 sont dans le graphe BDII)
 	FILTER ( ?enQueueDate >= ?dateErt1 && ?enQueueDate < ?dateErt2 && 
-	?queueName = "http://pipo/demo_queue" && ?queueNameLocal = "demo_queue") 
+	?queueName = ?queueNameLocal ) 
 }

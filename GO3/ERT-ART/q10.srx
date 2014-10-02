@@ -11,7 +11,7 @@
  </head>
  <results distinct="false" ordered="true">
   <result>
-   <binding name="queueName"><literal>http://pipo/demo_queue</literal></binding>
+   <binding name="queueName"><literal>demo_queue</literal></binding>
    <binding name="iriJob"><uri>http://grid-observatory.org/instances/pbsJob/gy_demo_job</uri></binding>
    <binding name="iriQueue"><uri>http://grid-observatory.org/instances/bdiiEntry/gy_demo_bdiientry</uri></binding>
    <binding name="enQueueDate"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:05:00Z</literal></binding>
