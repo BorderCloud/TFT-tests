@@ -1,7 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gy: <http://grid-observatory.org/ns/2014/GO3#>
  
-SELECT DISTINCT ?ert1 ?valErt1 ?dateErt1 ?dateErt2 
+SELECT DISTINCT ?valErt1 ?dateErt1 ?dateErt2 
 {
 	?item 	rdf:first ?ert1 ;
 			rdf:rest/rdf:first ?ert2 .

@@ -14,5 +14,6 @@ SELECT ?queueName ?dateErt1 ?dateErt2  ?valErt1
 							] ;
 					rdf:rest/rdf:first/gy:time ?dateErt2.
 
-    FILTER ( ?dateErt1>= xsd:dateTime("2005-01-01T00:00:00Z") && ?dateErt2<= xsd:dateTime("2005-01-02T00:00:00Z") )				  
+    FILTER ( ?dateErt1>= xsd:dateTime("2005-01-01T00:00:00Z") 
+    && ?dateErt2<= xsd:dateTime("2005-01-02T00:00:00Z") )				  
 } order by ?dateErt1
