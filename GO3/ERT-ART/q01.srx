@@ -1,14 +1,21 @@
-<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
- <head>
-  <variable name="a"/>
-  <variable name="b"/>
-  <variable name="diffSeconds"/>
- </head>
- <results distinct="false" ordered="true">
-  <result>
-   <binding name="a"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:05:00Z</literal></binding>
-   <binding name="b"><literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T01:00:00Z</literal></binding>
-   <binding name="diffSeconds"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3300</literal></binding>
-  </result>
- </results>
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="a"/>
+    <variable name="b"/>
+    <variable name="diffSeconds"/>
+  </head>
+  <results>
+    <result>
+      <binding name="a">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T00:05:00Z</literal>
+      </binding>
+      <binding name="b">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-01T01:00:00Z</literal>
+      </binding>
+      <binding name="diffSeconds">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#duration">PT55M0.000S</literal>
+      </binding>
+    </result>
+  </results>
 </sparql>
