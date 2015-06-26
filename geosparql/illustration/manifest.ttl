@@ -1,0 +1,76 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/subquery/manifest#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix dawgt:   <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+
+
+# EXAMPLES IN THE DOC OGC GeoSPARQL - A Geographic Query Language for RDF Data 11-052r4  ANNEXE B
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "Sub query" ;
+    mf:entries
+    ( 
+    :query01
+    :query02
+    :query03
+    :query04
+    :query05
+    :query05_detail
+   ) .
+          
+  :query01 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "query01 - geof:sfContains" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+         [ qt:query  <query01.rq> ;
+           qt:data   <example.rdf> ] ;
+    mf:result  <query01.srx>
+    .     
+                 
+  :query02 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "query02 - geof:sfWithin" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+         [ qt:query  <query02.rq> ;
+           qt:data   <example.rdf> ] ;
+    mf:result  <query02.srx>
+    .     
+                 
+  :query03 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "query03 - geof:sfTouches" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+         [ qt:query  <query03.rq> ;
+           qt:data   <example.rdf> ] ;
+    mf:result  <query03.srx>
+    .     
+                 
+  :query04 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "query04 - geof:distance" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+         [ qt:query  <query04.rq> ;
+           qt:data   <example.rdf> ] ;
+    mf:result  <query04.srx>
+    .     
+                 
+  :query05 rdf:type mf:QueryEvaluationTest ;
+    mf:name    "query05 - overlap" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+         [ qt:query  <query05.rq> ;
+           qt:data   <example.rdf> ] ;
+    mf:result  <query05.srx>
+    .     
+                
+  :query05_detail rdf:type mf:QueryEvaluationTest ;
+    mf:name    "query05_detail - overlap" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+         [ qt:query  <query05_detail.rq> ;
+           qt:data   <example.rdf> ] ;
+    mf:result  <query05_detail.srx>
+    .     
+                
