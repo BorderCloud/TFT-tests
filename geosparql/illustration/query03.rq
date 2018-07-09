@@ -7,7 +7,7 @@ WHERE { ?f my:hasExactGeometry ?fGeom .
 ?fGeom geo:asWKT ?fWKT .
 my:A my:hasExactGeometry ?aGeom .
 ?aGeom geo:asWKT ?aWKT .
-?my:D my:hasExactGeometry ?dGeom .
+my:D my:hasExactGeometry ?dGeom .
 ?dGeom geo:asWKT ?dWKT .
 FILTER (geof:sfTouches(?fWKT,
 geof:union(?aWKT, ?dWKT)))
