@@ -10,28 +10,24 @@ UNION
 ?fGeom geo:asWKT ?fSerial .
 my:A geo:hasDefaultGeometry ?aGeom .
 ?aGeom geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 UNION
 { # feature – geometry
 ?f geo:hasDefaultGeometry ?fGeom .
 ?fGeom geo:asWKT ?fSerial .
 my:A geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 UNION
 { # geometry – feature
 ?f geo:asWKT ?fSerial .
 my:A geo:hasDefaultGeometry ?aGeom .
 ?aGeom geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 UNION
 { # geometry – geometry
 ?f geo:hasDefaultGeometry ?fGeom .
 ?fGeom geo:asWKT ?fSerial .
 my:A geo:hasDefaultGeometry ?aGeom .
 ?aGeom geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
-}
-}
-}
-}
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 }
