@@ -7,7 +7,10 @@
 	rdfs:label "Grid Observatory tests" ;
 	mf:include (
 		<ERT-ART/manifest.ttl>
-	).
+	) ;
+        mf:includedSpecifications (
+            <http://grid-observatory.org/>
+        ) .
 
 
 <http://grid-observatory.org/> rdfs:label "Grid Observatory 3.0" ;

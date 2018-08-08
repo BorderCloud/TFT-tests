@@ -7,7 +7,10 @@
 	rdfs:label "OGC GeoSPARQL - A Geographic Query Language for RDF Data" ;
 	mf:include (
 		<illustration/manifest.ttl>
-	).
+	) ;
+     	mf:includedSpecifications (
+     		<http://www.opengis.net/ont/geosparql>
+     	) .
 
 
 <http://www.opengis.net/ont/geosparql> rdfs:label "GeoSPARQL" ;
