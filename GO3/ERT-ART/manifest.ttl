@@ -21,7 +21,7 @@
 ) .
 
 :test_1 rdf:type mf:QueryEvaluationTest ;
-    mf:name    "10 Substract date" ;
+    mf:name    "10 Subtract date" ;
     dawgt:approval dawgt:Approved;
 #    dawgt:approvedBy <???> ;
     mf:action
