@@ -1,4 +1,4 @@
-REFIX my: <http://example.org/ApplicationSchema#>
+PREFIX my: <http://example.org/ApplicationSchema#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 SELECT ?f
@@ -10,28 +10,24 @@ UNION
 ?fGeom geo:asWKT ?fSerial .
 my:A geo:hasDefaultGeometry ?aGeom .
 ?aGeom geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 UNION
 { # feature – geometry
 ?f geo:hasDefaultGeometry ?fGeom .
 ?fGeom geo:asWKT ?fSerial .
 my:A geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 UNION
 { # geometry – feature
 ?f geo:asWKT ?fSerial .
 my:A geo:hasDefaultGeometry ?aGeom .
 ?aGeom geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 UNION
 { # geometry – geometry
 ?f geo:hasDefaultGeometry ?fGeom .
 ?fGeom geo:asWKT ?fSerial .
 my:A geo:hasDefaultGeometry ?aGeom .
 ?aGeom geo:asWKT ?aSerial .
-FILTER (geof:sfOverlaps(?fSerial, ?aSerial))
-}
-}
-}
-}
+FILTER (geof:sfOverlaps(?fSerial, ?aSerial)) }
 }
